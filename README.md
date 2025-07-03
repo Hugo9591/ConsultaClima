@@ -1,69 +1,31 @@
-# React + TypeScript + Vite
+# Consulta del Clima  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripcion
+Este proyecto es una página web que permite consultar el clima de cualquier ciudad usando la API de OpenWeatherMap. 
+Los usuarios ingresan el nombre de la ciudad y el país y al hacer clic en el botón de consultar clima, la aplicación muestra la temperatura actual, mínima y máxima del día, en grados Celsius. 
 
-Currently, two official plugins are available:
+## Características  
+- Consulta el clima ingresando el nombre de la ciudad y el país.  
+- Muestra temperatura actual, mínima y máxima en grados Celsius.  
+- Validaciones de campos vacíos y ciudades inexistentes.  
+- Conversión de grados Fahrenheit a Celsius con TypeScript.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías Utilizadas 
+- **React**
+- **Modulos CSS**  
+- **TypeScript** (peticion a la y lógica)  
+- **API OpenWeatherMap** (para obtener datos del clima)  
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Instalación y Uso  
+1. Clona este repositorio:  
+   ```bash
+   git clone https://github.com/Hugo9591/ConsultaClima.git
+2. Accede a la carpeta
+3. npm install para instalar dependencias
+4. npm run dev
+5. Abre navegador localhost:5173
+  - Ingresa el nombre de una ciudad y su país.
+  - Haz clic en "Consultar Clima" para ver los resultados.
+- Notas
+Necesitas una clave de API de OpenWeatherMap para que funcione la consulta.
+Puedes obtener una clave gratuita en https://openweathermap.org/.
