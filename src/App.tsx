@@ -22,6 +22,8 @@ function App() {
         {hasWeatherData && <WeatherDetail weather={weather}/>}
 
         {notFound && <Alert>Ciudad No Encontrada</Alert>}
+
+        {/* {weather.main.temp_max} */}
         
       </div>
     </>

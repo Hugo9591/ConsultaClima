@@ -41,7 +41,7 @@ export type Weather = z.infer<typeof Weather>
 const initialState = {
     name: '',
     main: {
-        temp: 0,
+        temp: 8,
         temp_max: 0,
         temp_min: 0
     }
@@ -109,6 +109,8 @@ export default function useWeather() {
 
     //Comprobar que haya algo en weather
     const hasWeatherData = useMemo(() => weather.name , [weather])
+
+    
 
     return {
         weather,
